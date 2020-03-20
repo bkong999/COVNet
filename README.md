@@ -1,5 +1,5 @@
 # COVID-19 Detection Neural Network (COVNet)
-This is a PyTorch implementation of the paper "Using Artificial Intelligence to Detect COVID-19 and Community Acquired Pneumonia based on Pulmonary CT: Evaluation of the Diagnostic Accuracy". It supports training, validation and testing for COVNet.
+This is a PyTorch implementation of the paper "Artificial Intelligence Distinguishes COVID-19 from Community Acquired Pneumonia on Chest CT". It supports training, validation and testing for COVNet.
 
 <img src="assets/overview.png" width="600">
 
