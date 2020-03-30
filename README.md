@@ -3,6 +3,9 @@ This is a PyTorch implementation of the paper "[Artificial Intelligence Distingu
 
 <img src="assets/overview.png" width="600">
 
+### Updates & Notices
+- 2020-03-30: Thanks for the interest in our work. Unfortunately, we do not own the data, and we have to get permission from our collaborators before we share the data and model. We will update later.
+
 ## Citation
 If you find this code is useful for your research, please consider citing:
 ```
