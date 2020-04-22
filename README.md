@@ -26,7 +26,7 @@ If you find this code is useful for your research, please consider citing:
 - tensorboardX
 
 ### Prepare data
-Preprocess the data according to the Appendix E1 section in the paper and organize them as the following. A example of train.csv and val.csv are also provided.
+Preprocess the data according to the [Appendix E1 section](https://pubs.rsna.org/doi/suppl/10.1148/radiol.2020200905/suppl_file/ry_200905_supp_in%20press.pdf) of the paper and organize them as the following. A example of train.csv and val.csv are also provided.
 ```
 data
 ├── caseid1
