@@ -194,7 +194,7 @@ def main(args):
         print('-' * 30)
 
         train_acc, val_acc = train_metric['accuracy'], val_metric['accuracy']
-        file_name = ('val_acc_{}_train_acc_{}_epoch_{}.pth'.
+        file_name = ('train_acc_{}_val_acc_{}_epoch_{}.pth'.
                      format(train_acc, val_acc, epoch))
         torch.save(cov_net, os.path.join(model_dir, file_name))
 
