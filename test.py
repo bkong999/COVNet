@@ -62,7 +62,7 @@ def main(args):
         val_dataset, batch_size=1, shuffle=False, num_workers=11,
         drop_last=False)
 
-    cov_net = model.COVNet(n_classes=3)
+    cov_net = model.COVNet(n_classes=args.n_classes)
     if torch.cuda.is_available():
         cov_net.cuda()
 
