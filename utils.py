@@ -44,6 +44,8 @@ def print_progress(epoch=None, n_epoch=None, n_iter=None, iters_one_batch=None,
     precisions = metric_collects['precisions']
     recalls = metric_collects['recalls']
 
+    n_classes = len(precisions)
+
     log_str = ''
     if epoch is not None:
         log_str += 'Ep: {0}/{1}|'.format(epoch, n_epoch)
@@ -55,9 +57,9 @@ def print_progress(epoch=None, n_epoch=None, n_iter=None, iters_one_batch=None,
         log_str += 'Loss: {0:.4f}|'.format(mean_loss)
 
     log_str += 'Acc: {:.4f}|'.format(accuracy)
-    templ = 'Pr: ' + ', '.join(['{:.4f}'] * 2) + '|'
+    templ = 'Pr: ' + ', '.join(['{:.4f}'] * (n_classes-1)) + '|'
     log_str += templ.format(*(precisions[1:].tolist()))
-    templ = 'Re: ' + ', '.join(['{:.4f}'] * 2) + '|'
+    templ = 'Re: ' + ', '.join(['{:.4f}'] * (n_classes-1)) + '|'
     log_str += templ.format(*(recalls[1:].tolist()))
 
     if cur_lr is not None:
@@ -84,9 +86,11 @@ def print_epoch_progress(train_loss, val_loss, time_duration, train_metric,
     log_str = 'Train/Val| Loss: {:.4f}/{:.4f}|'.format(train_loss, val_loss)
     log_str += 'Acc: {:.4f}/{:.4f}|'.format(train_acc, val_acc)
 
-    templ = 'Pr: ' + ', '.join(['{:.4f}'] * 2) + '/'
+    n_classes = len(train_prec)
+
+    templ = 'Pr: ' + ', '.join(['{:.4f}'] * (n_classes-1)) + '/'
     log_str += templ.format(*(train_prec[1:].tolist()))
-    templ = ', '.join(['{:.4f}'] * 2) + '|'
+    templ = ', '.join(['{:.4f}'] * (n_classes-1)) + '|'
     log_str += templ.format(*(val_prec[1:].tolist()))
 
     templ = 'Re: ' + ', '.join(['{:.4f}'] * 2) + '/'
