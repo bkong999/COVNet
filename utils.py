@@ -93,9 +93,9 @@ def print_epoch_progress(train_loss, val_loss, time_duration, train_metric,
     templ = ', '.join(['{:.4f}'] * (n_classes-1)) + '|'
     log_str += templ.format(*(val_prec[1:].tolist()))
 
-    templ = 'Re: ' + ', '.join(['{:.4f}'] * 2) + '/'
+    templ = 'Re: ' + ', '.join(['{:.4f}'] * (n_classes - 1)) + '/'
     log_str += templ.format(*(train_recalls[1:].tolist()))
-    templ = ', '.join(['{:.4f}'] * 2) + '|'
+    templ = ', '.join(['{:.4f}'] * (n_classes - 1)) + '|'
     log_str += templ.format(*(val_recalls[1:].tolist()))
     log_str += 'T(s) {:.2f}'.format(time_duration)
     print(log_str)

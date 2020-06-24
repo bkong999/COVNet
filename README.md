@@ -9,7 +9,7 @@ This is a PyTorch implementation of the paper "[Artificial Intelligence Distingu
 ## Citation
 If you find this code is useful for your research, please consider citing:
 ```
-@article{zhang2020artificial,
+@article{li2020artificial,
   title={Artificial Intelligence Distinguishes COVID-19 from Community Acquired Pneumonia on Chest CT},
   author={Li, Lin and Qin, Lixin and Xu, Zeguo and Yin, Youbing and Wang, Xin and Kong, Bin and Bai, Junjie and Lu, Yi and Fang, Zhenghan and Song, Qi and Cao, Kunlin and others},
   journal={Radiology},
